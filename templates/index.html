@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>GuessGame</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+
+<div class="continput">
+    <h1>Guess Number</h1>
+    <h3>REST API GAME</h3>
+    <br>
+    <h5>Session ID</h5>
+    <br>
+    <h4>{{ content }}</h4>
+    <p>DO YOU WANNA PLAY?</p>
+    <form action="play" method="post">
+        <ul>
+            <li>
+                <input type="radio" name="yes_no" id="yes" value="Yes">
+                <label>Yes</label>
+                <div class="bullet">
+                    <div class="line zero"></div>
+                </div>
+
+            </li>
+            <li>
+                <input type="radio" name="yes_no" id="no" value="No">
+                <label>No</label>
+                <div class="bullet">
+                    <div class="line zero"></div>
+                </div>
+            </li>
+            <input type="submit" name="submit" value="PLAY" id="play">
+        </ul>
+    </form>
+</div>
+
+</html>

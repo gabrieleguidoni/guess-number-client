@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>EnterGuessYes</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+
+<div class="continput">
+    <br>
+    <p>{{ content_guess }}</p>
+    <form action="enter_guess" method="post">
+        <p>{{ message }}</p>
+        <br>
+        <p>Insert here the id for the session</p>
+        <br>
+        <input type="text" name="id_input">
+        <br>
+        <p>Insert here your guessed number between 1-10000</p>
+        <br>
+        <input type="text" name="guess_input">
+        <br>
+        <br>
+        <input type="submit" value="ENTER_GUESS" id="enter_guess">
+    </form>
+</div>
+
+</html>

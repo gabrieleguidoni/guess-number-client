@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>EnterGuess</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+
+<br>
+<p>You entered number {{ num }} and id {{ contenty }} </p>
+<br>
+<p>REST API response is: {{ responsefinal }}</p>
+<p>{{ content_guess }}</p>
+<div class="continput">
+    <form action="enter_guess" method="post">
+        <p>{{ message }}</p>
+        <br>
+        <p>Insert here the id for the session</p>
+        <br>
+        <input type="text" name="id_input">
+        <br>
+        <p>Insert here your guessed number between 1-10000</p>
+        <br>
+        <input type="text" name="guess_input">
+        <br>
+        <br>
+        <input type="submit" value="ENTER_GUESS" id="enter_guess">
+    </form>
+</div>
+
+</html>
